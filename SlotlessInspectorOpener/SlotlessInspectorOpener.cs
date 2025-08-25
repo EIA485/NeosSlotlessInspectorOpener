@@ -1,20 +1,16 @@
-﻿using NeosModLoader;
+﻿using BepInEx;
+using BepInEx.NET.Common;
+using BepInExResoniteShim;
 using HarmonyLib;
 using FrooxEngine;
 
 namespace SlotlessInspectorOpener
 {
-    public class SlotlessInspectorOpener : NeosMod
+    [ResonitePlugin(PluginMetadata.GUID, PluginMetadata.NAME, PluginMetadata.VERSION, PluginMetadata.AUTHORS, PluginMetadata.REPOSITORY_URL)]
+    [BepInDependency(BepInExResoniteShim.PluginMetadata.GUID)]
+    public class SlotlessInspectorOpener : BasePlugin
     {
-        public override string Name => "SlotlessInspectorOpener";
-        public override string Author => "eia485";
-        public override string Version => "1.0.0";
-        public override string Link => "https://github.com/EIA485/NeosSlotlessInspectorOpener";
-        public override void OnEngineInit()
-        {
-            Harmony harmony = new Harmony("net.eia485.SlotlessInspectorOpener");
-            harmony.PatchAll();
-        }
+        public override void Load() => HarmonyInstance.PatchAll();
 
         [HarmonyPatch(typeof(InspectorHelper), nameof(InspectorHelper.OpenInspectorForTarget))]
         class SlotlessInspectorOpenerPatch
