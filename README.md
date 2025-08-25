@@ -1,6 +1,6 @@
 # SlotlessInspectorOpener
 
-A [BepisLoader](https://github.com/ResoniteModding/BepisLoader) mod for [Resonite](https://resonite.com/) that makes it so pressing the open inspector button on a refeditor targeting a worker that has no slot will open it's parent worker.
+A [BepisLoader](https://github.com/ResoniteModding/BepisLoader) mod for [Resonite](https://resonite.com/) that makes it so pressing the open inspector button on a refeditor targeting a worker that has no slot will open it's parent worker. Also shows the view parent on now valid worker inspectors.
 
 ## Installation
 1. Install [BepisLoader](https://github.com/ResoniteModding/BepisLoader).

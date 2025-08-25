@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Version>1.0.1</Version>
+		<Version>1.1.0</Version>
 		<Authors>eia485</Authors>
 		<Product>$(AssemblyName)</Product>
 		<RepositoryUrl>https://github.com/EIA485/Neos$(Product)</RepositoryUrl>
@@ -39,6 +39,9 @@
 		</Reference>
 		<Reference Include="FrooxEngine">
 		    <HintPath>$(GamePath)FrooxEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="Elements.Core">
+			<HintPath>$(GamePath)Elements.core.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
